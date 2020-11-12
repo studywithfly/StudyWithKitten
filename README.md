@@ -68,7 +68,9 @@ Optional:
 
 **Flow Navigation** (Screen to Screen)
 
-* We have four separate function so no flow between each
+* ToDoList -> Edit screen
+* Habit -> Add screen
+* Course schedule -> Edit screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
