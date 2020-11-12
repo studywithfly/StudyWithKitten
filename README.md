@@ -11,16 +11,16 @@ Original App Design Project - README
 
 ## Overview
 ### Description
-Our App provide users with the function of setting lock screen timers, view their course schedules and write their habits and todolist.
+Our App provide users with functions of study aidding. Help user develop time management skills and good study habit. Help user organize their daily study life.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:** Study Agumentation App
+- **Category:** Study Augmentation App
 - **Mobile:** This app would be primarily developed for mobile.
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Story:** Our App provide users with the function of setting lock screen timers, view their course schedules and write their habits and todolist.
+- **Market:** Students who has a lot of things to do every day or have some work that needs staggering deadline and want to form good study habit.
+- **Habit:** This App should be used every day since there could be something to be done every day and there is some habit that needs some actions everyday.
+- **Scope:** The first version of the App is to enable user to use add to do and set habit reminder on their end. In the future versions, we may add social aspect to our App so that users can share their study daily life on our App.
 
 ## Product Spec
 
@@ -28,39 +28,47 @@ Our App provide users with the function of setting lock screen timers, view thei
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Enter study mode(Lock screen for a period of time)
+* ToDoList (add and delete tasks)
+* Habit, something to be done regularly
+* Course schedule
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Moment section (share study life with other users)
+* Planner, interactive calendar (Study plan, long/short term goal with a due date)
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* StudyMode Screen
+   * Set timer for locking screen
+* ToDoList Screen
+   * Allow user to add or delete tasks
+* Habit screen
+   * Form a habit and set the alert for the habit
+   * Allow user to edit or delete the habit
+   * Allow user to check the completed habit for today
+   * Show the percentage of today's completion of habits
+* Course schedule screen
+   * Allow user to add or delete his course(information including course title, course number, time and location) and show as a list of courses
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* StudyMode
+* ToDoList
+* Habit
+* Course schedule
+
+Optional:
+
+* Moment
+* Planner
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* We have four separate function so no flow between each
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
