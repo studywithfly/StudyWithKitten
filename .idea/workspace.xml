@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be8aa329-f2e8-4665-98a1-d9789830345d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../Library/Android/sdk" />
     <property name="memory.settings.postsync.last.time.stamp" value="1605143878296" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/gradle" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -136,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605143912616</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add diagram and modify flow in README">
+      <created>1605152667835</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605152667835</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -145,18 +157,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="removing binary files" />
     <MESSAGE value="finish README(except design UI)" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish README(except design UI)" />
+    <MESSAGE value="add diagram and modify flow in README" />
+    <option name="LAST_COMMIT_MESSAGE" value="add diagram and modify flow in README" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="54" key="CommitChangelistDialog2" timestamp="1605143912375">
+    <state x="371" y="54" key="CommitChangelistDialog2" timestamp="1605152667712">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="371" y="54" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1605143912375" />
+    <state x="371" y="54" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1605152667712" />
     <state x="433" y="113" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605136112949" />
-    <state x="425" y="239" key="Vcs.Push.Dialog.v2" timestamp="1605143922933">
+    <state x="425" y="239" key="Vcs.Push.Dialog.v2" timestamp="1605152679479">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="425" y="239" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1605143922933" />
+    <state x="425" y="239" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1605152679479" />
     <state x="496" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605136126454" />
+    <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605152755281">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1605152755281" />
   </component>
 </project>
