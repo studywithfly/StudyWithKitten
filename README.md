@@ -81,10 +81,7 @@ Optional:
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+<img src="https://github.com/studywithfly/StudyWithKitten/blob/main/schema.gif" width=600>
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]# StudyWithKitten
+We don't have feed or profile screen so networking is not needed in our first version of application.
