@@ -84,4 +84,5 @@ Optional:
 ### Models
 <img src="https://github.com/studywithfly/StudyWithKitten/blob/main/schema.gif" width=600>
 ### Networking
+
 We don't have feed or profile screen so networking is not needed in our first version of application.
