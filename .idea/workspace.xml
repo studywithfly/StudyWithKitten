@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be8aa329-f2e8-4665-98a1-d9789830345d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="be8aa329-f2e8-4665-98a1-d9789830345d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605152667835</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change to gif">
+      <created>1605251375063</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605251375063</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -158,18 +163,19 @@
     <MESSAGE value="removing binary files" />
     <MESSAGE value="finish README(except design UI)" />
     <MESSAGE value="add diagram and modify flow in README" />
-    <option name="LAST_COMMIT_MESSAGE" value="add diagram and modify flow in README" />
+    <MESSAGE value="change to gif" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to gif" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="54" key="CommitChangelistDialog2" timestamp="1605152667712">
+    <state x="371" y="54" key="CommitChangelistDialog2" timestamp="1605251374908">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="371" y="54" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1605152667712" />
+    <state x="371" y="54" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1605251374908" />
     <state x="433" y="113" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605136112949" />
-    <state x="425" y="239" key="Vcs.Push.Dialog.v2" timestamp="1605152679479">
+    <state x="425" y="239" key="Vcs.Push.Dialog.v2" timestamp="1605251382608">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="425" y="239" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1605152679479" />
+    <state x="425" y="239" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1605251382608" />
     <state x="496" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605136126454" />
     <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605152755281">
       <screen x="0" y="23" width="1440" height="877" />
