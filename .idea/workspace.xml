@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="NONE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="be8aa329-f2e8-4665-98a1-d9789830345d" name="Default Changelist" comment="" />
+    <list default="true" id="6cd32417-9840-4566-b434-783c59aa9ef4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/studywithkitten/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/studywithkitten/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -31,22 +45,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1k6ly8eMwKaqqqi3PfEoRK5EdWf" />
+  <component name="ProjectId" id="1ktN3kJDqOXaeAQq06dQNSfwYHx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="android.sdk.path" value="$PROJECT_DIR$/../Library/Android/sdk" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1605143878296" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/gradle" />
-    </key>
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1606515791300" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -56,14 +64,13 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="StudyWithKitten.app" />
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ALL_USERS" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -99,16 +106,11 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
-      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -119,67 +121,34 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="be8aa329-f2e8-4665-98a1-d9789830345d" name="Default Changelist" comment="" />
-      <created>1605029173686</created>
+      <changelist id="6cd32417-9840-4566-b434-783c59aa9ef4" name="Default Changelist" comment="" />
+      <created>1606515730714</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605029173686</updated>
+      <updated>1606515730714</updated>
     </task>
-    <task id="LOCAL-00001" summary="removing binary files">
-      <created>1605136113200</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1605136113200</updated>
-    </task>
-    <task id="LOCAL-00002" summary="finish README(except design UI)">
-      <created>1605143912616</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1605143912616</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add diagram and modify flow in README">
-      <created>1605152667835</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1605152667835</updated>
-    </task>
-    <task id="LOCAL-00004" summary="change to gif">
-      <created>1605251375063</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1605251375063</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="removing binary files" />
-    <MESSAGE value="finish README(except design UI)" />
-    <MESSAGE value="add diagram and modify flow in README" />
-    <MESSAGE value="change to gif" />
-    <option name="LAST_COMMIT_MESSAGE" value="change to gif" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="54" key="CommitChangelistDialog2" timestamp="1605251374908">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1182" height="56" key="GridCell.Tab.0.bottom" timestamp="1606515982010">
+      <screen x="0" y="23" width="1344" height="817" />
     </state>
-    <state x="371" y="54" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1605251374908" />
-    <state x="433" y="113" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605136112949" />
-    <state x="425" y="239" key="Vcs.Push.Dialog.v2" timestamp="1605251382608">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1182" height="56" key="GridCell.Tab.0.bottom/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982010" />
+    <state width="1182" height="56" key="GridCell.Tab.0.center" timestamp="1606515982009">
+      <screen x="0" y="23" width="1344" height="817" />
     </state>
-    <state x="425" y="239" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1605251382608" />
-    <state x="496" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605136126454" />
-    <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605152755281">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1182" height="56" key="GridCell.Tab.0.center/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982009" />
+    <state width="1182" height="56" key="GridCell.Tab.0.left" timestamp="1606515982008">
+      <screen x="0" y="23" width="1344" height="817" />
     </state>
-    <state x="503" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1605152755281" />
+    <state width="1182" height="56" key="GridCell.Tab.0.left/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982008" />
+    <state width="1182" height="56" key="GridCell.Tab.0.right" timestamp="1606515982009">
+      <screen x="0" y="23" width="1344" height="817" />
+    </state>
+    <state width="1182" height="56" key="GridCell.Tab.0.right/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982009" />
+    <state x="381" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1606516233760">
+      <screen x="0" y="23" width="1344" height="817" />
+    </state>
+    <state x="381" y="264" key="com.intellij.ide.util.TipDialog/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606516233760" />
   </component>
 </project>
