@@ -1,10 +1,12 @@
-package com.example.studywithkitten.todo;
+package com.example.studywithkitten.fragments;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -15,6 +17,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.studywithkitten.R;
+import com.example.studywithkitten.edit.TodoEditActivity;
+import com.example.studywithkitten.edit.TodoItemsAdapter;
 
 import org.apache.commons.io.FileUtils;
 
@@ -24,7 +28,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class TodoFragment extends Activity {
     public static final String KEY_ITEM_TEXT = "item_text";
     public static final String KEY_ITEM_POSITION = "item_position";
     public static final int EDIT_TEXT_CODE = 20;
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAdd;
     EditText etItem;
     RecyclerView rvItem;
-    ItemsAdapter itemsAdapter;
+    TodoItemsAdapter todoItemsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,30 +52,30 @@ public class MainActivity extends AppCompatActivity {
 
         loadItems();
 
-        ItemsAdapter.OnLongClickListener onItemLongClicked = new ItemsAdapter.OnLongClickListener() {
+        TodoItemsAdapter.OnLongClickListener onItemLongClicked = new TodoItemsAdapter.OnLongClickListener() {
             public void onItemLongClicked(int position) {
                 items.remove(position);
-                itemsAdapter.notifyItemRemoved(position);
+                todoItemsAdapter.notifyItemRemoved(position);
                 Toast.makeText(getApplicationContext(), "Items was removed", Toast.LENGTH_SHORT).show();
                 saveItems();
             }
         };
 
 
-        ItemsAdapter.OnClickListener onClickListener = new ItemsAdapter.OnClickListener() {
+        TodoItemsAdapter.OnClickListener onClickListener = new TodoItemsAdapter.OnClickListener() {
 
             @Override
             public void onItemClicked(int position) {
                 Log.d("MainActivity", "Single click at position" + position);
-                Intent i = new Intent(MainActivity.this, EditActivity.class);
+                Intent i = new Intent(TodoFragment.this, TodoEditActivity.class);
                 i.putExtra(KEY_ITEM_TEXT, items.get(position));
                 i.putExtra(KEY_ITEM_POSITION, position);
                 startActivityForResult(i, EDIT_TEXT_CODE);
             }
         };
 
-        itemsAdapter = new ItemsAdapter(items, onItemLongClicked, onClickListener);
-        rvItem.setAdapter(itemsAdapter);
+        todoItemsAdapter = new TodoItemsAdapter(items, onItemLongClicked, onClickListener);
+        rvItem.setAdapter(todoItemsAdapter);
         rvItem.setLayoutManager(new LinearLayoutManager(this));
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String todoItem = etItem.getText().toString();
                 items.add(todoItem);
-                itemsAdapter.notifyItemInserted(items.size()-1);
+                todoItemsAdapter.notifyItemInserted(items.size()-1);
                 etItem.setText("");
                 Toast.makeText(getApplicationContext(), "Items was added", Toast.LENGTH_SHORT).show();
                 saveItems();
@@ -98,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             String itemText = data.getStringExtra(KEY_ITEM_TEXT);
             int position = data.getExtras().getInt(KEY_ITEM_POSITION);
             items.set(position, itemText);
-            itemsAdapter.notifyItemChanged(position);
+            todoItemsAdapter.notifyItemChanged(position);
             saveItems();
             Toast.makeText(getApplicationContext(), "Item uodated successfully", Toast.LENGTH_SHORT).show();
         } else {

@@ -1,4 +1,4 @@
-package com.example.studywithkitten.todo;
+package com.example.studywithkitten.edit;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
+public class TodoItemsAdapter extends RecyclerView.Adapter<TodoItemsAdapter.ViewHolder>{
 
     public interface OnClickListener {
         void onItemClicked(int position);
@@ -23,7 +23,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
     OnLongClickListener longClickListener;
     OnClickListener clickListener;
 
-    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener,OnClickListener clickListener) {
+    public TodoItemsAdapter(List<String> items, OnLongClickListener longClickListener, OnClickListener clickListener) {
         this.items = items;
         this.longClickListener = longClickListener;
         this.clickListener = clickListener;
