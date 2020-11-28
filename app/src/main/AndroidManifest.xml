@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.studywithkitten.EditActivity"></activity>
-        <activity android:name="com.example.studywithkitten.MainActivity">
+        <activity android:name=".studymode.MainActivity"></activity>
+        <activity android:name=".courseschedule.MainActivity" />
+        <activity android:name=".habit.MainActivity" />
+        <activity android:name=".EditActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.studywithkitten;
+package com.example.studywithkitten.todo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,7 +18,7 @@ public class EditActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit);
+        setContentView(R.layout.activity_todo_edit);
 
         etItem = findViewById(R.id.etItem);
         btnSave = findViewById(R.id.btnSave);

@@ -1,4 +1,4 @@
-package com.example.studywithkitten;
+package com.example.studywithkitten.todo;
 
 import android.view.LayoutInflater;
 import android.view.View;

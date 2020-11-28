@@ -1,4 +1,4 @@
-package com.example.studywithkitten;
+package com.example.studywithkitten.todo;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_todo_main);
 
 
         btnAdd = findViewById(R.id.btnAdd);
