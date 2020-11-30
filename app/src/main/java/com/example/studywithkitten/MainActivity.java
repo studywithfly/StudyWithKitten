@@ -54,11 +54,13 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (menuItem.getItemId()) {
                     case R.id.action_study:
+                        Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                         fragment = new StudyModeFragment();
                         break;
-//                    case R.id.action_todo:
-//                        fragment = new TodoFragment();
-//                        break;
+                    case R.id.action_todo:
+                        Toast.makeText(MainActivity.this, "Todo!", Toast.LENGTH_SHORT).show();
+                        fragment = new TodoFragment();
+                        break;
                     case R.id.action_habit:
                         fragment = new HabitFragment();
                         break;
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new StudyModeFragment();
                         break;
                 }
-//                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
                 return true;
             }
         });
