@@ -33,7 +33,7 @@ public class ScheduleEditActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_schedule_main, container, false);
+        return inflater.inflate(R.layout.activity_schedule_edit, container, false);
     }
 
     @Override
@@ -45,6 +45,7 @@ public class ScheduleEditActivity extends Fragment {
         number = view.findViewById(R.id.number);
         time = view.findViewById(R.id.time);
         location = view.findViewById(R.id.location);
+        btnSave = view.findViewById(R.id.btnSave);
 
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Add Course");
         final Course course = new Course();

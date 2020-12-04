@@ -26,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.example.studywithkitten.edit.ScheduleEditActivity;
 import com.example.studywithkitten.fragments.HabitFragment;
 import com.example.studywithkitten.fragments.ScheduleFragment;
 import com.example.studywithkitten.fragments.StudyModeFragment;
@@ -41,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
 
     final FragmentManager fragmentManager = getSupportFragmentManager();
     private BottomNavigationView bottomNavigationView;
+
+    public void navigateToCourseEdit () {
+        Fragment f = new ScheduleEditActivity();
+        fragmentManager.beginTransaction().replace(R.id.flContainer, f).commit();
+
+    }
+
+    public void addCourse() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

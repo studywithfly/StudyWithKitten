@@ -19,7 +19,8 @@ import androidx.annotation.NonNull;
         import android.widget.EditText;
         import android.widget.Toast;
 
-        import com.example.studywithkitten.R;
+import com.example.studywithkitten.MainActivity;
+import com.example.studywithkitten.R;
 import com.example.studywithkitten.components.Course;
 import com.example.studywithkitten.edit.ScheduleEditActivity;
 import com.example.studywithkitten.edit.ScheduleItemsAdapter;
@@ -92,8 +93,9 @@ public class ScheduleFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // TODO: trigger edit page
-                Intent i = new Intent(getContext(), ScheduleEditActivity.class);
-                startActivityForResult(i, EDIT_TEXT_CODE);
+//                Intent i = new Intent(getContext(), ScheduleEditActivity.class);
+//                startActivityForResult(i, EDIT_TEXT_CODE);
+                ((MainActivity) getActivity()).navigateToCourseEdit();
             }
         });
     }
