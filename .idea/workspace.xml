@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -13,9 +14,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/TodoEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/TodoEditFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/ScheduleFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/ScheduleFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/TodoFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/TodoFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo_edit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +29,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[PXL]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_28" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -95,13 +101,12 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="studyWithKitten.app" />
+      <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ALL_USERS" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -137,16 +142,11 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
-      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -191,44 +191,64 @@
       <screen x="0" y="23" width="1344" height="817" />
     </state>
     <state x="441" y="193" key="AndroidCreateResourceFileDialog/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606527492308" />
-    <state width="1168" height="335" key="GridCell.Tab.0.bottom" timestamp="1607043800201">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1342" y="312" key="AndroidProcessChooserDialog" timestamp="1607128928246">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1342" y="312" key="AndroidProcessChooserDialog/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607128928246" />
+    <state width="1388" height="326" key="GridCell.Tab.0.bottom" timestamp="1607129222800">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.bottom/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982010" />
+    <state width="1388" height="326" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222800" />
     <state width="1168" height="335" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800201" />
     <state width="762" height="238" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441817" />
-    <state width="1168" height="335" key="GridCell.Tab.0.center" timestamp="1607043800200">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1388" height="326" key="GridCell.Tab.0.center" timestamp="1607129222798">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.center/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982009" />
+    <state width="1388" height="326" key="GridCell.Tab.0.center/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222798" />
     <state width="1168" height="335" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800200" />
     <state width="762" height="238" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441816" />
-    <state width="1168" height="335" key="GridCell.Tab.0.left" timestamp="1607043800199">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1388" height="326" key="GridCell.Tab.0.left" timestamp="1607129222793">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.left/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982008" />
+    <state width="1388" height="326" key="GridCell.Tab.0.left/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222793" />
     <state width="1168" height="335" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800199" />
     <state width="762" height="238" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441815" />
-    <state width="1168" height="335" key="GridCell.Tab.0.right" timestamp="1607043800201">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1388" height="326" key="GridCell.Tab.0.right" timestamp="1607129222799">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.right/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982009" />
+    <state width="1388" height="326" key="GridCell.Tab.0.right/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222799" />
     <state width="1168" height="335" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800201" />
     <state width="762" height="238" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441816" />
     <state x="341" y="164" key="SettingsEditor" timestamp="1607041570979">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1607041570979" />
-    <state x="408" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1606688754465">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="-1376" y="318" key="com.intellij.ide.util.TipDialog" timestamp="1607121173528">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="381" y="264" key="com.intellij.ide.util.TipDialog/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606529031952" />
+    <state x="-1376" y="318" key="com.intellij.ide.util.TipDialog/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607121173528" />
     <state x="408" y="265" key="com.intellij.ide.util.TipDialog/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1606688754465" />
-    <state x="421" y="181" width="839" height="870" key="search.everywhere.popup" timestamp="1607041622594">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1439" y="186" width="958" height="894" key="search.everywhere.popup" timestamp="1607128538459">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="337" y="164" width="670" height="676" key="search.everywhere.popup/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606529310511" />
-    <state x="-1439" y="186" width="958" height="894" key="search.everywhere.popup/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606689393508" />
+    <state x="-1439" y="186" width="958" height="894" key="search.everywhere.popup/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607128538459" />
     <state x="421" y="181" width="839" height="870" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1607041622594" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/TodoEditFragment.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

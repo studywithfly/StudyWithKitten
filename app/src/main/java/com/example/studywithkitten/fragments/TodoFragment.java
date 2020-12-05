@@ -2,12 +2,10 @@ package com.example.studywithkitten.fragments;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -20,7 +18,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.studywithkitten.R;
-import com.example.studywithkitten.edit.TodoEditActivity;
+import com.example.studywithkitten.edit.TodoEditFragment;
 import com.example.studywithkitten.edit.TodoItemsAdapter;
 
 import org.apache.commons.io.FileUtils;
@@ -76,7 +74,7 @@ public class TodoFragment extends Fragment {
             @Override
             public void onItemClicked(int position) {
                 Log.d("MainActivity", "Single click at position" + position);
-                Intent i = new Intent(getContext(), TodoEditActivity.class);
+                Intent i = new Intent(getContext(), TodoEditFragment.class);
                 i.putExtra(KEY_ITEM_TEXT, items.get(position));
                 i.putExtra(KEY_ITEM_POSITION, position);
                 startActivityForResult(i, EDIT_TEXT_CODE);

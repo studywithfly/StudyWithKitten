@@ -2,13 +2,11 @@ package com.example.studywithkitten.fragments;
 
 import androidx.annotation.NonNull;
         import androidx.annotation.Nullable;
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.fragment.app.Fragment;
+import androidx.fragment.app.Fragment;
         import androidx.recyclerview.widget.LinearLayoutManager;
         import androidx.recyclerview.widget.RecyclerView;
 
-        import android.app.Activity;
-        import android.content.Intent;
+import android.content.Intent;
         import android.os.Bundle;
 
         import android.util.Log;
@@ -16,18 +14,14 @@ import androidx.annotation.NonNull;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.Toast;
+import android.widget.Toast;
 
 import com.example.studywithkitten.MainActivity;
 import com.example.studywithkitten.R;
-import com.example.studywithkitten.components.Course;
-import com.example.studywithkitten.edit.ScheduleEditActivity;
 import com.example.studywithkitten.edit.ScheduleItemsAdapter;
-import com.example.studywithkitten.edit.TodoEditActivity;
-        import com.example.studywithkitten.edit.ScheduleItemsAdapter;
+import com.example.studywithkitten.edit.TodoEditFragment;
 
-        import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FileUtils;
 
         import java.io.File;
         import java.io.IOException;
@@ -78,7 +72,7 @@ public class ScheduleFragment extends Fragment {
             @Override
             public void onItemClicked(int position) {
                 Log.d("MainActivity", "Single click at position" + position);
-                Intent i = new Intent(getContext(), TodoEditActivity.class);
+                Intent i = new Intent(getContext(), TodoEditFragment.class);
                 i.putExtra(KEY_ITEM_TEXT, items.get(position));
                 i.putExtra(KEY_ITEM_POSITION, position);
                 startActivityForResult(i, EDIT_TEXT_CODE);
@@ -92,16 +86,14 @@ public class ScheduleFragment extends Fragment {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: trigger edit page
-//                Intent i = new Intent(getContext(), ScheduleEditActivity.class);
-//                startActivityForResult(i, EDIT_TEXT_CODE);
+                // helper function written in MainActivity
                 ((MainActivity) getActivity()).navigateToCourseEdit();
             }
         });
     }
 
     private File getDataFile () {
-        return new File(getContext().getFilesDir(), "courses.txt");
+        return new File(getContext().getFilesDir(), "course.txt");
     }
 
 

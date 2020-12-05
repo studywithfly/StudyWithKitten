@@ -17,7 +17,7 @@ import android.widget.EditText;
 import com.example.studywithkitten.R;
 import com.example.studywithkitten.fragments.TodoFragment;
 
-public class TodoEditActivity extends Fragment {
+public class TodoEditFragment extends Fragment {
 
     EditText etItem;
     Button btnSave;

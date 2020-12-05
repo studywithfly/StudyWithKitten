@@ -4,37 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import com.example.studywithkitten.edit.ScheduleEditActivity;
+import com.example.studywithkitten.edit.ScheduleEditFragment;
 import com.example.studywithkitten.fragments.HabitFragment;
 import com.example.studywithkitten.fragments.ScheduleFragment;
 import com.example.studywithkitten.fragments.StudyModeFragment;
 import com.example.studywithkitten.fragments.TodoFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.io.File;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,14 +26,15 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
 
     public void navigateToCourseEdit () {
-        Fragment f = new ScheduleEditActivity();
+        Fragment f = new ScheduleEditFragment();
         fragmentManager.beginTransaction().replace(R.id.flContainer, f).commit();
-
     }
 
-    public void addCourse() {
-
+    public void navigateBack () {
+        Fragment f = new ScheduleFragment();
+        fragmentManager.beginTransaction().replace(R.id.flContainer, f).commit();
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
