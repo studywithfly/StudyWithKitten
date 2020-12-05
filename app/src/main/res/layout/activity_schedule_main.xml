@@ -22,13 +22,15 @@
         android:id="@+id/rvItem"
         android:layout_width="280dp"
         android:layout_height="217dp"
+        android:layout_above="@+id/btnAdd"
         android:layout_below="@id/btnAdd"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="319dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="-536dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="50dp" />
 
 </RelativeLayout>

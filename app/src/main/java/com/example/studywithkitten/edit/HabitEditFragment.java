@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.studywithkitten.MainActivity;
 import com.example.studywithkitten.R;
 import com.example.studywithkitten.components.Course;
+import com.example.studywithkitten.components.Habit;
 import com.example.studywithkitten.fragments.ScheduleFragment;
 import com.example.studywithkitten.fragments.TodoFragment;
 
@@ -32,17 +33,13 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ScheduleEditFragment extends Fragment {
+public class HabitEditFragment extends Fragment {
 
-    EditText title;
-    EditText number;
-    EditText date;
-    EditText time;
-    EditText location;
+    EditText habit;
 
     Button btnSave;
 
-    List<String> courses;
+    List<String> habits;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,34 +51,25 @@ public class ScheduleEditFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        title = view.findViewById(R.id.title);
-        number = view.findViewById(R.id.number);
-        date = view.findViewById(R.id.date);
-        number = view.findViewById(R.id.number);
-        time = view.findViewById(R.id.time);
-        location = view.findViewById(R.id.location);
+        habit = view.findViewById(R.id.habit);
         btnSave = view.findViewById(R.id.btnSave);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Add Course");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Add Habit");
 
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Course course = new Course();
-                course.setTitle(title.getText().toString());
-                course.setNumber(number.getText().toString());
-                course.setDate(date.getText().toString());
-                course.setTime(time.getText().toString());
-                course.setLocation(location.getText().toString());
+                Habit newHabit = new Habit();
+                newHabit.setHabit(habit.getText().toString());
 
                 loadItems();
-                courses.add(course.toString());
+                habits.add(newHabit.toString());
 
 
                 // 1. save info to data.txt
                 saveItems();
-                Toast.makeText(getActivity(), "Course saved successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Habit saved successfully!", Toast.LENGTH_SHORT).show();
                 System.out.println("123" + getContext().getFilesDir());
                 // 2. navigate to previous page
                 ((MainActivity) getActivity()).navigateBack();
@@ -91,22 +79,22 @@ public class ScheduleEditFragment extends Fragment {
 
     private void loadItems() {
         try {
-            courses = new ArrayList<>(FileUtils.readLines(getDataFile(), Charset.defaultCharset()));
+            habits = new ArrayList<>(FileUtils.readLines(getDataFile(), Charset.defaultCharset()));
         } catch (IOException e) {
             Log.e("MainActivity", "Error reading items", e);
-            courses = new ArrayList<>();
+            habits = new ArrayList<>();
         }
     }
 
     private void saveItems(){
         try {
-            FileUtils.writeLines(getDataFile(), courses);
+            FileUtils.writeLines(getDataFile(), habits);
         } catch (IOException e) {
             Log.e("MainActivity", "Error writing items", e);
         }
     }
 
     private File getDataFile () {
-        return new File(getContext().getFilesDir(), "course.txt");
+        return new File(getContext().getFilesDir(), "habit.txt");
     }
 }

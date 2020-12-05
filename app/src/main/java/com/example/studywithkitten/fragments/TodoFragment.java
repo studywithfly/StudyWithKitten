@@ -110,7 +110,6 @@ public class TodoFragment extends Fragment {
             Log.e("MainActivity", "Error reading items", e);
             items = new ArrayList<>();
         }
-
     }
 
     private void saveItems(){

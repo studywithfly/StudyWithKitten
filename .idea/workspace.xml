@@ -11,18 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cd32417-9840-4566-b434-783c59aa9ef4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/TodoEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/TodoEditFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/ScheduleFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/ScheduleFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/ScheduleEditFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/TodoFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/TodoFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_todo_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,10 +171,10 @@
       <screen x="0" y="23" width="1344" height="817" />
     </state>
     <state x="239" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606525463571" />
-    <state x="1065" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1607041485572">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-703" y="255" key="#com.intellij.ide.util.MemberChooser" timestamp="1607146322264">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-703" y="255" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606693492430" />
+    <state x="-703" y="255" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607146322264" />
     <state x="1065" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1607041485572" />
     <state x="316" y="364" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606517518767">
       <screen x="0" y="23" width="1344" height="817" />
@@ -195,32 +192,32 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1342" y="312" key="AndroidProcessChooserDialog/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607128928246" />
-    <state width="1388" height="326" key="GridCell.Tab.0.bottom" timestamp="1607129222800">
+    <state width="1871" height="248" key="GridCell.Tab.0.bottom" timestamp="1607138132720">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.bottom/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982010" />
-    <state width="1388" height="326" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222800" />
+    <state width="1871" height="248" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607138132720" />
     <state width="1168" height="335" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800201" />
     <state width="762" height="238" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441817" />
-    <state width="1388" height="326" key="GridCell.Tab.0.center" timestamp="1607129222798">
+    <state width="1871" height="248" key="GridCell.Tab.0.center" timestamp="1607138132718">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.center/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982009" />
-    <state width="1388" height="326" key="GridCell.Tab.0.center/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222798" />
+    <state width="1871" height="248" key="GridCell.Tab.0.center/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607138132718" />
     <state width="1168" height="335" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800200" />
     <state width="762" height="238" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441816" />
-    <state width="1388" height="326" key="GridCell.Tab.0.left" timestamp="1607129222793">
+    <state width="1871" height="248" key="GridCell.Tab.0.left" timestamp="1607138132717">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.left/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982008" />
-    <state width="1388" height="326" key="GridCell.Tab.0.left/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222793" />
+    <state width="1871" height="248" key="GridCell.Tab.0.left/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607138132717" />
     <state width="1168" height="335" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800199" />
     <state width="762" height="238" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441815" />
-    <state width="1388" height="326" key="GridCell.Tab.0.right" timestamp="1607129222799">
+    <state width="1871" height="248" key="GridCell.Tab.0.right" timestamp="1607138132719">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1182" height="56" key="GridCell.Tab.0.right/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606515982009" />
-    <state width="1388" height="326" key="GridCell.Tab.0.right/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607129222799" />
+    <state width="1871" height="248" key="GridCell.Tab.0.right/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607138132719" />
     <state width="1168" height="335" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1607043800201" />
     <state width="762" height="238" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1607040441816" />
     <state x="341" y="164" key="SettingsEditor" timestamp="1607041570979">
@@ -233,11 +230,11 @@
     <state x="381" y="264" key="com.intellij.ide.util.TipDialog/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606529031952" />
     <state x="-1376" y="318" key="com.intellij.ide.util.TipDialog/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607121173528" />
     <state x="408" y="265" key="com.intellij.ide.util.TipDialog/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1606688754465" />
-    <state x="-1439" y="186" width="958" height="894" key="search.everywhere.popup" timestamp="1607128538459">
+    <state x="-1439" y="186" width="958" height="894" key="search.everywhere.popup" timestamp="1607138034069">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="337" y="164" width="670" height="676" key="search.everywhere.popup/-1366.23.1366.1001/0.23.1344.817@0.23.1344.817" timestamp="1606529310511" />
-    <state x="-1439" y="186" width="958" height="894" key="search.everywhere.popup/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607128538459" />
+    <state x="-1439" y="186" width="958" height="894" key="search.everywhere.popup/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607138034069" />
     <state x="421" y="181" width="839" height="870" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1607041622594" />
   </component>
   <component name="XDebuggerManager">
