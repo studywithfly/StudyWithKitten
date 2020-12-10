@@ -23,9 +23,6 @@ public class Habit {
 
     @Override
     public String toString() {
-        return "Habit{" +
-                "isCompleted=" + isCompleted +
-                ", habit='" + habit + '\'' +
-                '}';
+        return isCompleted + "," + habit;
     }
 }

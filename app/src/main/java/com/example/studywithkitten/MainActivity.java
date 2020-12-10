@@ -25,13 +25,11 @@ public class MainActivity extends AppCompatActivity {
     final FragmentManager fragmentManager = getSupportFragmentManager();
     private BottomNavigationView bottomNavigationView;
 
-    public void navigateToCourseEdit () {
-        Fragment f = new ScheduleEditFragment();
+    public void navigateToEdit (Fragment f) {
         fragmentManager.beginTransaction().replace(R.id.flContainer, f).commit();
     }
 
-    public void navigateBack () {
-        Fragment f = new ScheduleFragment();
+    public void navigateBack (Fragment f) {
         fragmentManager.beginTransaction().replace(R.id.flContainer, f).commit();
     }
 
@@ -71,5 +69,7 @@ public class MainActivity extends AppCompatActivity {
         });
         // Set default selection
         bottomNavigationView.setSelectedItemId(R.id.action_study);
+//        bottomNavigationView.getItemIconTintList();
+        bottomNavigationView.setItemIconTintList(null);
     }
 }

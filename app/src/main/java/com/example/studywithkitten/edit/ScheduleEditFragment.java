@@ -5,8 +5,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,16 +18,13 @@ import com.example.studywithkitten.MainActivity;
 import com.example.studywithkitten.R;
 import com.example.studywithkitten.components.Course;
 import com.example.studywithkitten.fragments.ScheduleFragment;
-import com.example.studywithkitten.fragments.TodoFragment;
 
 import org.apache.commons.io.FileUtils;
-import org.w3c.dom.ls.LSOutput;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ScheduleEditFragment extends Fragment {
@@ -48,7 +43,7 @@ public class ScheduleEditFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_schedule_edit, container, false);
+        return inflater.inflate(R.layout.fragment_schedule_edit, container, false);
     }
 
     @Override
@@ -84,7 +79,8 @@ public class ScheduleEditFragment extends Fragment {
                 Toast.makeText(getActivity(), "Course saved successfully!", Toast.LENGTH_SHORT).show();
                 System.out.println("123" + getContext().getFilesDir());
                 // 2. navigate to previous page
-                ((MainActivity) getActivity()).navigateBack();
+                Fragment f = new ScheduleFragment();
+                ((MainActivity) getActivity()).navigateBack(f);
             }
         });
     }

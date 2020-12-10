@@ -45,14 +45,14 @@ public class TodoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_todo_main, container, false);
+        return inflater.inflate(R.layout.fragment_todo_main, container, false);
     }
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        setContentView(R.layout.activity_todo_main);
+//        setContentView(R.layout.fragment_todo_main);
         btnAdd = view.findViewById(R.id.btnAdd);
         etItem = view.findViewById(R.id.etItem);
         rvItem = view.findViewById(R.id.rvItem);
@@ -69,19 +69,19 @@ public class TodoFragment extends Fragment {
         };
 
 
-        TodoItemsAdapter.OnClickListener onClickListener = new TodoItemsAdapter.OnClickListener() {
+//        TodoItemsAdapter.OnClickListener onClickListener = new TodoItemsAdapter.OnClickListener() {
+////
+////            @Override
+////            public void onItemClicked(int position) {
+////                Log.d("MainActivity", "Single click at position" + position);
+////                Intent i = new Intent(getContext(), TodoEditFragment.class);
+////                i.putExtra(KEY_ITEM_TEXT, items.get(position));
+////                i.putExtra(KEY_ITEM_POSITION, position);
+////                startActivityForResult(i, EDIT_TEXT_CODE);
+////            }
+////        };
 
-            @Override
-            public void onItemClicked(int position) {
-                Log.d("MainActivity", "Single click at position" + position);
-                Intent i = new Intent(getContext(), TodoEditFragment.class);
-                i.putExtra(KEY_ITEM_TEXT, items.get(position));
-                i.putExtra(KEY_ITEM_POSITION, position);
-                startActivityForResult(i, EDIT_TEXT_CODE);
-            }
-        };
-
-        todoItemsAdapter = new TodoItemsAdapter(items, onItemLongClicked, onClickListener);
+        todoItemsAdapter = new TodoItemsAdapter(items, onItemLongClicked);
         rvItem.setAdapter(todoItemsAdapter);
         rvItem.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -173,7 +173,7 @@ public class TodoFragment extends Fragment {
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_todo_main);
+//        setContentView(R.layout.fragment_todo_main);
 //
 //
 //        btnAdd = findViewById(R.id.btnAdd);

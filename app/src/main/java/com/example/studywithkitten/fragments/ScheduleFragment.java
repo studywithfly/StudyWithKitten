@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.studywithkitten.MainActivity;
 import com.example.studywithkitten.R;
+import com.example.studywithkitten.edit.ScheduleEditFragment;
 import com.example.studywithkitten.edit.ScheduleItemsAdapter;
 import com.example.studywithkitten.edit.TodoEditFragment;
 
@@ -44,7 +45,7 @@ public class ScheduleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_schedule_main, container, false);
+        return inflater.inflate(R.layout.fragment_schedule_main, container, false);
     }
 
 
@@ -67,19 +68,19 @@ public class ScheduleFragment extends Fragment {
         };
 
 
-        ScheduleItemsAdapter.OnClickListener onClickListener = new ScheduleItemsAdapter.OnClickListener() {
+//        ScheduleItemsAdapter.OnClickListener onClickListener = new ScheduleItemsAdapter.OnClickListener() {
+//
+//            @Override
+//            public void onItemClicked(int position) {
+//                Log.d("MainActivity", "Single click at position" + position);
+//                Intent i = new Intent(getContext(), TodoEditFragment.class);
+//                i.putExtra(KEY_ITEM_TEXT, items.get(position));
+//                i.putExtra(KEY_ITEM_POSITION, position);
+//                startActivityForResult(i, EDIT_TEXT_CODE);
+//            }
+//        };
 
-            @Override
-            public void onItemClicked(int position) {
-                Log.d("MainActivity", "Single click at position" + position);
-                Intent i = new Intent(getContext(), TodoEditFragment.class);
-                i.putExtra(KEY_ITEM_TEXT, items.get(position));
-                i.putExtra(KEY_ITEM_POSITION, position);
-                startActivityForResult(i, EDIT_TEXT_CODE);
-            }
-        };
-
-        scheduleItemsAdapter = new ScheduleItemsAdapter(items, onItemLongClicked, onClickListener);
+        scheduleItemsAdapter = new ScheduleItemsAdapter(items, onItemLongClicked);
         rvItem.setAdapter(scheduleItemsAdapter);
         rvItem.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -87,7 +88,8 @@ public class ScheduleFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // helper function written in MainActivity
-                ((MainActivity) getActivity()).navigateToCourseEdit();
+                Fragment f = new ScheduleEditFragment();
+                ((MainActivity) getActivity()).navigateToEdit(f);
             }
         });
     }

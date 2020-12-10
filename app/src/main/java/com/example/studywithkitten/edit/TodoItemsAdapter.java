@@ -12,21 +12,19 @@ import java.util.List;
 
 public class TodoItemsAdapter extends RecyclerView.Adapter<TodoItemsAdapter.ViewHolder>{
 
-    public interface OnClickListener {
-        void onItemClicked(int position);
-    }
+//    public interface OnClickListener {
+//        void onItemClicked(int position);
+//    }
     public interface OnLongClickListener {
         void onItemLongClicked(int position);
     }
 
     List<String> items;
     OnLongClickListener longClickListener;
-    OnClickListener clickListener;
 
-    public TodoItemsAdapter(List<String> items, OnLongClickListener longClickListener, OnClickListener clickListener) {
+    public TodoItemsAdapter(List<String> items, OnLongClickListener longClickListener) {
         this.items = items;
         this.longClickListener = longClickListener;
-        this.clickListener = clickListener;
     }
 
     @NonNull
@@ -64,13 +62,13 @@ public class TodoItemsAdapter extends RecyclerView.Adapter<TodoItemsAdapter.View
         //Update the view inside of the view with this data
         public void bind(String item) {
             tvItem.setText(item);
-            tvItem.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    clickListener.onItemClicked(getAdapterPosition());
-                }
-
-            });
+//            tvItem.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    clickListener.onItemClicked(getAdapterPosition());
+//                }
+//
+//            });
 
             tvItem.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override

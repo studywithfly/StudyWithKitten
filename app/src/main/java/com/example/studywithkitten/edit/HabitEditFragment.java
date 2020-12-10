@@ -5,8 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,13 +17,12 @@ import android.widget.Toast;
 
 import com.example.studywithkitten.MainActivity;
 import com.example.studywithkitten.R;
-import com.example.studywithkitten.components.Course;
+
 import com.example.studywithkitten.components.Habit;
-import com.example.studywithkitten.fragments.ScheduleFragment;
-import com.example.studywithkitten.fragments.TodoFragment;
+import com.example.studywithkitten.fragments.HabitFragment;
+
 
 import org.apache.commons.io.FileUtils;
-import org.w3c.dom.ls.LSOutput;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,7 +43,7 @@ public class HabitEditFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_schedule_edit, container, false);
+        return inflater.inflate(R.layout.fragment_habit_edit, container, false);
     }
 
     @Override
@@ -72,7 +70,8 @@ public class HabitEditFragment extends Fragment {
                 Toast.makeText(getActivity(), "Habit saved successfully!", Toast.LENGTH_SHORT).show();
                 System.out.println("123" + getContext().getFilesDir());
                 // 2. navigate to previous page
-                ((MainActivity) getActivity()).navigateBack();
+                Fragment f = new HabitFragment();
+                ((MainActivity) getActivity()).navigateBack(f);
             }
         });
     }
