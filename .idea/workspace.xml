@@ -10,13 +10,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd32417-9840-4566-b434-783c59aa9ef4" name="Default Changelist" comment="adjust">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6cd32417-9840-4566-b434-783c59aa9ef4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_habit_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_habit_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/habit_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/habit_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/HabitAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/edit/HabitAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/HabitFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/studywithkitten/fragments/HabitFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +160,19 @@
       <option name="presentableId" value="Default" />
       <updated>1606515730714</updated>
     </task>
+    <task id="LOCAL-00001" summary="adjust habit layout">
+      <created>1607634429174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607634429174</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adjust habit layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust habit layout" />
   </component>
   <component name="WindowStateProjectService">
     <state x="515" y="135" key="#app" timestamp="1607040316145">
@@ -195,10 +204,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1342" y="312" key="AndroidProcessChooserDialog/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1607128928246" />
-    <state x="278" y="38" key="CommitChangelistDialog2" timestamp="1607634335134">
+    <state x="278" y="38" key="CommitChangelistDialog2" timestamp="1607634428853">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="278" y="38" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1607634335134" />
+    <state x="278" y="38" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1607634428853" />
     <state width="1798" height="251" key="GridCell.Tab.0.bottom" timestamp="1607631934801">
       <screen x="1440" y="-58" width="1920" height="1080" />
     </state>

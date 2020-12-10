@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,13 +25,20 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
         void onItemLongClicked(int position);
     }
 
+    public interface OnCheckedChangeListener {
+        void onCheckedChanged(int position);
+    }
+
     List<Habit> items;
     OnLongClickListener longClickListener;
+    CompoundButton.OnCheckedChangeListener checkedChangeListener;
 //    OnClickListener clickListener;
 
-    public HabitAdapter(List<String> strItems, OnLongClickListener longClickListener) {
+    public HabitAdapter(List<String> strItems, OnLongClickListener longClickListener,
+                        CompoundButton.OnCheckedChangeListener checkedChangeListener) {
         this.items = parseItems(strItems);
         this.longClickListener = longClickListener;
+        this.checkedChangeListener = checkedChangeListener;
 //        this.clickListener = clickListener;
     }
 
@@ -74,10 +82,8 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-
         CheckBox isCompleted;
         TextView textHabit;
-
 
         public ViewHolder (View itemView) {
             super (itemView);
@@ -89,6 +95,29 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
         public void bind(Habit item) {
             textHabit.setText(item.getHabit());
             isCompleted.setChecked(item.isCompleted());
+//            isCompleted.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                    checkedChangeListener.onCheckedChanged(getAdapterPosition());
+//                    /*
+//                    int amt=0;
+//                    if(Product1.isChecked())
+//                    {
+//                        amt=amt+1000;
+//                    }
+//                    if(Product2.isChecked())
+//                    {
+//                        amt=amt+2000;
+//                    }
+//                    if(Product3.isChecked())
+//                    {
+//                        amt=amt+3000;
+//                    }
+//                    amount.setText(amt+"Rs.");
+//                    * */
+//                }
+//            });
+
 //            tvItem.setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View view) {
@@ -96,15 +125,14 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
 //                }
 //
 //            });
-
-//            item.setOnLongClickListener(new View.OnLongClickListener() {
-//                @Override
-//                public boolean onLongClick(View view) {
-//                    //remove the item from the recycler view
-//                    longClickListener.onItemLongClicked(getAdapterPosition());
-//                    return true;
-//                }
-//            });
+            textHabit.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    // remove the item from the recycler view
+                    longClickListener.onItemLongClicked(getAdapterPosition());
+                    return true;
+                }
+            });
         }
     }
 

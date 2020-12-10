@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.example.studywithkitten.MainActivity;
@@ -67,6 +68,15 @@ public class HabitFragment extends Fragment {
             }
         };
 
+        HabitAdapter.OnCheckedChangeListener onCheckedChangeListener = new HabitAdapter.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(int position) {
+                String h = items.get(position);
+                String[] strArr = h.split(",");
+                strArr[1] = strArr[1] == "true" ? "false" : "true";
+                items.set(position, strArr[0] + "," + strArr[1]);
+            }
+        };
 
 //        HabitAdapter.OnClickListener onClickListener = new HabitAdapter.OnClickListener() {
 //            @Override
@@ -79,7 +89,7 @@ public class HabitFragment extends Fragment {
 //            }
 //        };
 
-        habitAdapter = new HabitAdapter(items, onItemLongClicked);
+        habitAdapter = new HabitAdapter(items, onItemLongClicked, (CompoundButton.OnCheckedChangeListener) onCheckedChangeListener);
         rvItem.setAdapter(habitAdapter);
         rvItem.setLayoutManager(new LinearLayoutManager(getContext()));
 
