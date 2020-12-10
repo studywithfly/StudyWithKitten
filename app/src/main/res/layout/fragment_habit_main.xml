@@ -14,22 +14,24 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="157dp"
-        android:layout_marginBottom="101dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="53dp"
         android:text="Add" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItem"
         android:layout_width="280dp"
-        android:layout_height="217dp"
-        android:layout_above="@id/circularPerbar"
+        android:layout_height="500dp"
+        android:layout_above="@+id/btnAdd"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="319dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="-536dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="30dp" />
 
     <ImageView
         android:id="@+id/circularPerbar"
