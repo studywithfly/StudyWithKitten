@@ -63,7 +63,7 @@ public class HabitFragment extends Fragment {
             public void onItemLongClicked(int position) {
                 items.remove(position);
                 habitAdapter.notifyItemRemoved(position);
-                Toast.makeText(getContext(), "Items was removed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Habit was removed", Toast.LENGTH_SHORT).show();
                 saveItems();
             }
         };
@@ -73,8 +73,10 @@ public class HabitFragment extends Fragment {
             public void onCheckedChanged(int position) {
                 String h = items.get(position);
                 String[] strArr = h.split(",");
-                strArr[1] = strArr[1] == "true" ? "false" : "true";
+                strArr[0] = strArr[0].equals("true") ? "false" : "true";
                 items.set(position, strArr[0] + "," + strArr[1]);
+                Toast.makeText(getContext(), "Habit was checked", Toast.LENGTH_SHORT).show();
+                saveItems();
             }
         };
 
@@ -89,7 +91,7 @@ public class HabitFragment extends Fragment {
 //            }
 //        };
 
-        habitAdapter = new HabitAdapter(items, onItemLongClicked, (CompoundButton.OnCheckedChangeListener) onCheckedChangeListener);
+        habitAdapter = new HabitAdapter(items, onItemLongClicked, onCheckedChangeListener);
         rvItem.setAdapter(habitAdapter);
         rvItem.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -111,6 +113,13 @@ public class HabitFragment extends Fragment {
     private void loadItems() {
         try {
             items = new ArrayList<>(FileUtils.readLines(getDataFile(), Charset.defaultCharset()));
+            if (items == null) {
+                Log.i("habit loadItems()", "null");
+            } else if (items.size() == 0){
+                Log.i("habit loadItems()", "empty");
+            } else {
+                Log.i("habit loadItems()", items.toString());
+            }
         } catch (IOException e) {
             Log.e("MainActivity", "Error reading items", e);
             items = new ArrayList<>();
@@ -118,10 +127,15 @@ public class HabitFragment extends Fragment {
     }
 
     private void saveItems(){
+        if (items == null) {
+            Log.i("HabitFrag savedItems()", "null");
+        } else {
+            Log.i("HabitFrag savedItems()", items.toString());
+        }
         try {
             FileUtils.writeLines(getDataFile(), items);
         } catch (IOException e) {
-            Log.e("MainActivity", "Error writing items", e);
+            Log.e("HabitFrag", "Error writing items", e);
         }
     }
 }

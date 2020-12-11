@@ -33,7 +33,6 @@ public class TodoItemsAdapter extends RecyclerView.Adapter<TodoItemsAdapter.View
         //use layout inflater to inflate a view
         View todoView = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
         return new ViewHolder(todoView);
-
     }
 
     @Override
@@ -50,8 +49,6 @@ public class TodoItemsAdapter extends RecyclerView.Adapter<TodoItemsAdapter.View
     //container to provide easy access to views that represent each row of the list
 
     class ViewHolder extends RecyclerView.ViewHolder {
-
-
         TextView tvItem;
 
         public ViewHolder (View itemView) {

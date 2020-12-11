@@ -1,5 +1,6 @@
 package com.example.studywithkitten.edit;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,11 +32,11 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
 
     List<Habit> items;
     OnLongClickListener longClickListener;
-    CompoundButton.OnCheckedChangeListener checkedChangeListener;
+    OnCheckedChangeListener checkedChangeListener;
 //    OnClickListener clickListener;
 
     public HabitAdapter(List<String> strItems, OnLongClickListener longClickListener,
-                        CompoundButton.OnCheckedChangeListener checkedChangeListener) {
+                        OnCheckedChangeListener checkedChangeListener) {
         this.items = parseItems(strItems);
         this.longClickListener = longClickListener;
         this.checkedChangeListener = checkedChangeListener;
@@ -44,7 +45,8 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
 
     // helper function parse string items into list of objects
     public List<Habit> parseItems(List<String> strItems) {
-        List<Habit> items = new ArrayList<>();
+//        Log.i("tag", strItems.toString());
+        List<Habit> itms = new ArrayList<>();
         for (String strItem : strItems) {
             String[] arr = strItem.split(",");
             boolean isCompleted = arr[0].equals("true") ? true : false;
@@ -52,9 +54,9 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
             Habit item = new Habit();
             item.setHabit(habit);
             item.setCompleted(isCompleted);
-            items.add(item);
+            itms.add(item);
         }
-        return items;
+        return itms;
     }
 
 
@@ -64,7 +66,6 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
         //use layout inflater to inflate a view
         View habitView = LayoutInflater.from(parent.getContext()).inflate(R.layout.habit_item, parent, false);
         return new ViewHolder(habitView);
-
     }
 
     @Override
@@ -81,7 +82,6 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
     //container to provide easy access to views that represent each row of the list
 
     class ViewHolder extends RecyclerView.ViewHolder {
-
         CheckBox isCompleted;
         TextView textHabit;
 
@@ -95,28 +95,28 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
         public void bind(Habit item) {
             textHabit.setText(item.getHabit());
             isCompleted.setChecked(item.isCompleted());
-//            isCompleted.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//                @Override
-//                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-//                    checkedChangeListener.onCheckedChanged(getAdapterPosition());
-//                    /*
-//                    int amt=0;
-//                    if(Product1.isChecked())
-//                    {
-//                        amt=amt+1000;
-//                    }
-//                    if(Product2.isChecked())
-//                    {
-//                        amt=amt+2000;
-//                    }
-//                    if(Product3.isChecked())
-//                    {
-//                        amt=amt+3000;
-//                    }
-//                    amount.setText(amt+"Rs.");
-//                    * */
-//                }
-//            });
+            isCompleted.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    checkedChangeListener.onCheckedChanged(getAdapterPosition());
+                    /*
+                    int amt=0;
+                    if(Product1.isChecked())
+                    {
+                        amt=amt+1000;
+                    }
+                    if(Product2.isChecked())
+                    {
+                        amt=amt+2000;
+                    }
+                    if(Product3.isChecked())
+                    {
+                        amt=amt+3000;
+                    }
+                    amount.setText(amt+"Rs.");
+                    * */
+                }
+            });
 
 //            tvItem.setOnClickListener(new View.OnClickListener() {
 //                @Override
@@ -128,7 +128,7 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
             textHabit.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
-                    // remove the item from the recycler view
+                    // remove the habit from the recycler view
                     longClickListener.onItemLongClicked(getAdapterPosition());
                     return true;
                 }

@@ -92,7 +92,7 @@ public class TodoFragment extends Fragment {
                 items.add(todoItem);
                 todoItemsAdapter.notifyItemInserted(items.size()-1);
                 etItem.setText("");
-                Toast.makeText(getContext(), "Items was added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Item was added", Toast.LENGTH_SHORT).show();
                 saveItems();
             }
         });
@@ -106,6 +106,13 @@ public class TodoFragment extends Fragment {
     private void loadItems() {
         try {
             items = new ArrayList<>(FileUtils.readLines(getDataFile(), Charset.defaultCharset()));
+            if (items == null) {
+                Log.i("todo loadItems()", "null");
+            } else if (items.size() == 0){
+                Log.i("todo loadItems()", "empty");
+            } else {
+                Log.i("todo loadItems()", items.toString());
+            }
         } catch (IOException e) {
             Log.e("MainActivity", "Error reading items", e);
             items = new ArrayList<>();
@@ -113,10 +120,16 @@ public class TodoFragment extends Fragment {
     }
 
     private void saveItems(){
+        if (items == null) {
+            Log.i("TodoFragmentLoadItems()", "null");
+        } else {
+            Log.i("TodoFragmentloadItems()", items.toString());
+        }
+
         try {
             FileUtils.writeLines(getDataFile(), items);
         } catch (IOException e) {
-            Log.e("MainActivity", "Error writing items", e);
+            Log.e("HabitFrag", "Error writing items", e);
         }
     }
 }
