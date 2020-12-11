@@ -80,16 +80,6 @@ public class HabitFragment extends Fragment {
             }
         };
 
-//        HabitAdapter.OnClickListener onClickListener = new HabitAdapter.OnClickListener() {
-//            @Override
-//            public void onItemClicked(int position) {
-//                Log.d("MainActivity", "Single click at position" + position);
-//                Intent i = new Intent(getContext(), HabitEditFragment.class);
-//                i.putExtra(KEY_ITEM_TEXT, items.get(position));
-//                i.putExtra(KEY_ITEM_POSITION, position);
-//                startActivityForResult(i, EDIT_TEXT_CODE);
-//            }
-//        };
 
         habitAdapter = new HabitAdapter(items, onItemLongClicked, onCheckedChangeListener);
         rvItem.setAdapter(habitAdapter);

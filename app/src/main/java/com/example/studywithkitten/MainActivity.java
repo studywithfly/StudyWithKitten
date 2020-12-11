@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (menuItem.getItemId()) {
                     case R.id.action_study:
-                        Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Study!", Toast.LENGTH_SHORT).show();
                         fragment = new StudyModeFragment();
                         break;
                     case R.id.action_todo:
@@ -55,9 +55,13 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_habit:
                         fragment = new HabitFragment();
+                        Toast.makeText(MainActivity.this, "Habit!", Toast.LENGTH_SHORT).show();
+
                         break;
                     case R.id.action_schedule:
                         fragment = new ScheduleFragment();
+                        Toast.makeText(MainActivity.this, "Schedule!", Toast.LENGTH_SHORT).show();
+
                         break;
                     default:
                         fragment = new StudyModeFragment();

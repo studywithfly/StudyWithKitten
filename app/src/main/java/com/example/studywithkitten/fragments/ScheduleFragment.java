@@ -67,19 +67,6 @@ public class ScheduleFragment extends Fragment {
             }
         };
 
-
-//        ScheduleItemsAdapter.OnClickListener onClickListener = new ScheduleItemsAdapter.OnClickListener() {
-//
-//            @Override
-//            public void onItemClicked(int position) {
-//                Log.d("MainActivity", "Single click at position" + position);
-//                Intent i = new Intent(getContext(), TodoEditFragment.class);
-//                i.putExtra(KEY_ITEM_TEXT, items.get(position));
-//                i.putExtra(KEY_ITEM_POSITION, position);
-//                startActivityForResult(i, EDIT_TEXT_CODE);
-//            }
-//        };
-
         scheduleItemsAdapter = new ScheduleItemsAdapter(items, onItemLongClicked);
         rvItem.setAdapter(scheduleItemsAdapter);
         rvItem.setLayoutManager(new LinearLayoutManager(getContext()));

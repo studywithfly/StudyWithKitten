@@ -51,12 +51,11 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
-                "title='" + title + '\'' +
-                ", number='" + number + '\'' +
-                ", date='" + date + '\'' +
-                ", time='" + time + '\'' +
-                ", location='" + location + '\'' +
-                '}';
+        return "Course: " +
+                "title= " + title +
+                ", number= " + number +
+                ", date= " + date +
+                ", time= " + time +
+                ", location= " + location;
     }
 }
