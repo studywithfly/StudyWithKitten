@@ -22,6 +22,8 @@ import com.example.studywithkitten.R;
 import com.example.studywithkitten.components.Habit;
 import com.example.studywithkitten.edit.HabitAdapter;
 import com.example.studywithkitten.edit.HabitEditFragment;
+import com.example.studywithkitten.edit.ScheduleEditFragment;
+import com.example.studywithkitten.edit.ScheduleItemsAdapter;
 
 import org.apache.commons.io.FileUtils;
 
@@ -32,15 +34,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HabitFragment extends Fragment {
-    public static final String KEY_ITEM_TEXT = "item_text";
-    public static final String KEY_ITEM_POSITION = "item_position";
-    public static final int EDIT_TEXT_CODE = 20;
 
     List<String> items;
-
     Button btnAdd;
     RecyclerView rvItem;
     HabitAdapter habitAdapter;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,7 +47,6 @@ public class HabitFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_habit_main, container, false);
     }
-
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -59,29 +57,30 @@ public class HabitFragment extends Fragment {
 
         loadItems();
 
-        HabitAdapter.OnLongClickListener onItemLongClicked = new HabitAdapter.OnLongClickListener() {
+        HabitAdapter.OnLongClickListener onLongClickListener = new HabitAdapter.OnLongClickListener() {
             public void onItemLongClicked(int position) {
                 items.remove(position);
                 habitAdapter.notifyItemRemoved(position);
-                Toast.makeText(getContext(), "Habit was removed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Items was removed", Toast.LENGTH_SHORT).show();
                 saveItems();
             }
         };
 
-        HabitAdapter.OnCheckedChangeListener onCheckedChangeListener = new HabitAdapter.OnCheckedChangeListener() {
-            @Override
+        HabitAdapter.OnCheckedChangeListener checkedChangeListener = new HabitAdapter.OnCheckedChangeListener() {
             public void onCheckedChanged(int position) {
-                String h = items.get(position);
-                String[] strArr = h.split(",");
-                strArr[0] = strArr[0].equals("true") ? "false" : "true";
-                items.set(position, strArr[0] + "," + strArr[1]);
-                Toast.makeText(getContext(), "Habit was checked", Toast.LENGTH_SHORT).show();
-                saveItems();
+                    String h = items.get(position);
+                    String[] strArr = h.split(",");
+                    strArr[0] = strArr[0].equals("true") ? "false" : "true";
+                    items.set(position, strArr[0] + "," + strArr[1]);
+    //                habitAdapter.notifyItemChanged(position);
+                    Toast.makeText(getContext(), "Habit was checked", Toast.LENGTH_SHORT).show();
+                    saveItems();
             }
+
         };
 
 
-        habitAdapter = new HabitAdapter(items, onItemLongClicked, onCheckedChangeListener);
+        habitAdapter = new HabitAdapter(items, onLongClickListener, checkedChangeListener);
         rvItem.setAdapter(habitAdapter);
         rvItem.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -99,17 +98,9 @@ public class HabitFragment extends Fragment {
         return new File(getContext().getFilesDir(), "habit.txt");
     }
 
-
     private void loadItems() {
         try {
             items = new ArrayList<>(FileUtils.readLines(getDataFile(), Charset.defaultCharset()));
-            if (items == null) {
-                Log.i("habit loadItems()", "null");
-            } else if (items.size() == 0){
-                Log.i("habit loadItems()", "empty");
-            } else {
-                Log.i("habit loadItems()", items.toString());
-            }
         } catch (IOException e) {
             Log.e("MainActivity", "Error reading items", e);
             items = new ArrayList<>();
@@ -117,15 +108,13 @@ public class HabitFragment extends Fragment {
     }
 
     private void saveItems(){
-        if (items == null) {
-            Log.i("HabitFrag savedItems()", "null");
-        } else {
-            Log.i("HabitFrag savedItems()", items.toString());
-        }
         try {
             FileUtils.writeLines(getDataFile(), items);
         } catch (IOException e) {
-            Log.e("HabitFrag", "Error writing items", e);
+            Log.e("MainActivity", "Error writing items", e);
         }
     }
+
+
+
 }

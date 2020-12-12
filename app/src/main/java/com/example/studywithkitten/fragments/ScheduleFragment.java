@@ -31,9 +31,6 @@ import org.apache.commons.io.FileUtils;
         import java.util.List;
 
 public class ScheduleFragment extends Fragment {
-    public static final String KEY_ITEM_TEXT = "item_text";
-    public static final String KEY_ITEM_POSITION = "item_position";
-    public static final int EDIT_TEXT_CODE = 20;
 
     List<String> items;
 
