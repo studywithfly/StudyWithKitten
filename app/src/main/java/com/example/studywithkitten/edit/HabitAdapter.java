@@ -19,9 +19,6 @@ import java.util.List;
 
 public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
 
-//    public interface OnClickListener {
-//        void onItemClicked(int position);
-//    }
     public interface OnLongClickListener {
         void onItemLongClicked(int position);
     }
@@ -33,14 +30,13 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
     List<Habit> items;
     OnLongClickListener longClickListener;
     OnCheckedChangeListener checkedChangeListener;
-//    OnClickListener clickListener;
+
 
     public HabitAdapter(List<String> strItems, OnLongClickListener longClickListener,
                         OnCheckedChangeListener checkedChangeListener) {
         this.items = parseItems(strItems);
         this.longClickListener = longClickListener;
         this.checkedChangeListener = checkedChangeListener;
-//        this.clickListener = clickListener;
     }
 
     // helper function parse string items into list of objects
@@ -99,32 +95,11 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                     checkedChangeListener.onCheckedChanged(getAdapterPosition());
-                    /*
-                    int amt=0;
-                    if(Product1.isChecked())
-                    {
-                        amt=amt+1000;
-                    }
-                    if(Product2.isChecked())
-                    {
-                        amt=amt+2000;
-                    }
-                    if(Product3.isChecked())
-                    {
-                        amt=amt+3000;
-                    }
-                    amount.setText(amt+"Rs.");
-                    * */
+
                 }
             });
 
-//            tvItem.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    clickListener.onItemClicked(getAdapterPosition());
-//                }
-//
-//            });
+
             textHabit.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {

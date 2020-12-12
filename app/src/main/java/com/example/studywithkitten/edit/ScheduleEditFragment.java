@@ -5,11 +5,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,6 +38,8 @@ public class ScheduleEditFragment extends Fragment {
     EditText location;
 
     Button btnSave;
+
+    public static final String INPUT_METHOD_SERVICE = Context.INPUT_METHOD_SERVICE;
 
     List<String> courses;
 
@@ -72,10 +76,13 @@ public class ScheduleEditFragment extends Fragment {
 
                 loadItems();
                 courses.add(course.toString());
+                closeKeyboard();
+
 
 
                 // 1. save info to data.txt
                 saveItems();
+
                 Toast.makeText(getActivity(), "Course saved successfully!", Toast.LENGTH_SHORT).show();
                 System.out.println("123" + getContext().getFilesDir());
                 // 2. navigate to previous page
@@ -83,6 +90,14 @@ public class ScheduleEditFragment extends Fragment {
                 ((MainActivity) getActivity()).navigateBack(f);
             }
         });
+    }
+
+    private void closeKeyboard() {
+        View view = getActivity().getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     private void loadItems() {

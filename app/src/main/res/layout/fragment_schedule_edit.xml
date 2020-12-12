@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
 
         android:layout_alignParentTop="false"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Add course title"
         android:inputType="textPersonName" />

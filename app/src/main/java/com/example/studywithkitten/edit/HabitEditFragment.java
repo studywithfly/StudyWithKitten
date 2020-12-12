@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,6 +38,8 @@ public class HabitEditFragment extends Fragment {
     EditText habit;
 
     Button btnSave;
+
+    public static final String INPUT_METHOD_SERVICE = Context.INPUT_METHOD_SERVICE;
 
     List<String> habits;
 
@@ -63,6 +67,7 @@ public class HabitEditFragment extends Fragment {
 
                 loadItems();
                 habits.add(newHabit.toString());
+                closeKeyboard();
 
 
                 // 1. save info to data.txt
@@ -76,6 +81,14 @@ public class HabitEditFragment extends Fragment {
         });
     }
 
+    private void closeKeyboard() {
+        View view = getActivity().getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+
     private void loadItems() {
         try {
             habits = new ArrayList<>(FileUtils.readLines(getDataFile(), Charset.defaultCharset()));
@@ -84,6 +97,7 @@ public class HabitEditFragment extends Fragment {
             habits = new ArrayList<>();
         }
     }
+
 
     private void saveItems(){
         try {
