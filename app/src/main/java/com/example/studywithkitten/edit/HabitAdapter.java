@@ -39,6 +39,11 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder>{
         this.checkedChangeListener = checkedChangeListener;
     }
 
+    public void bind(List<String> items) {
+        this.items = parseItems(items);
+        notifyDataSetChanged();
+    }
+
     // helper function parse string items into list of objects
     public List<Habit> parseItems(List<String> strItems) {
 //        Log.i("tag", strItems.toString());

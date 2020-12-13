@@ -60,7 +60,8 @@ public class HabitFragment extends Fragment {
         HabitAdapter.OnLongClickListener onLongClickListener = new HabitAdapter.OnLongClickListener() {
             public void onItemLongClicked(int position) {
                 items.remove(position);
-                habitAdapter.notifyItemRemoved(position);
+//                habitAdapter.notifyItemRemoved(position);
+                habitAdapter.bind(items);
                 Toast.makeText(getContext(), "Items was removed", Toast.LENGTH_SHORT).show();
                 saveItems();
             }
