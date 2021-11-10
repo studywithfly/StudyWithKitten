@@ -24,7 +24,7 @@ Our App provide users with functions of study aidding. Help user develop time ma
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
+### 1. User Stories 
 
 **Required Must-have Stories**
 
@@ -75,9 +75,6 @@ Optional:
 ## Wireframes
 <img src="https://github.com/studywithfly/StudyWithKitten/blob/main/diagram.gif" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 ### Models
